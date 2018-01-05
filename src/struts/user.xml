@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" namespace="/" extends="struts-default">
+		<action name="user">
+			<result>/WEB-INF/userjsp/usermain.jsp</result>
+		</action>
+		<action name="borrownow">
+			<result>/WEB-INF/userjsp/borrow_now.jsp</result>
+		</action>
+		<action name="borrowhistory">
+			<result>/WEB-INF/userjsp/borrow_history.jsp</result>
+		</action>
+		<action name="newbook">
+			<result>/WEB-INF/userjsp/new_book.jsp</result>
+		</action>
+		<action name="borrow" class="xrdsw.library.domain.Book"
+			method="execute">
+			<result name="borrowbook">/WEB-INF/userjsp/borrow_book.jsp</result>
+			<result name="ok">/WEB-INF/userjsp/renew.jsp</result>
+			<result name="renew">/WEB-INF/userjsp/renew.jsp</result>
+			<result name="error">/WEB-INF/error.jsp</result>
+		</action>
+		<action name="borrowbook">
+			<result>/WEB-INF/userjsp/borrow_book.jsp</result>
+		</action>
+		<action name="renew" class="xrdsw.library.domain.Borrow" method="execute">
+			<result name="renew">/WEB-INF/userjsp/renew.jsp</result>
+			<result name="ok">/WEB-INF/userjsp/renew.jsp</result>
+		</action>
+		<action name="lose">
+			<result>/WEB-INF/userjsp/lose.jsp</result>
+		</action>
+	</package>
+</struts>    

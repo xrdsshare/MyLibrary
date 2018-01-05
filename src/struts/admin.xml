@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="admin" namespace="/" extends="struts-default">
+		<action name="mylibrary" class="xrdsw.library.domain.Users"
+			method="execute">
+			<result name="admin">/WEB-INF/adminjsp/adminmain.jsp</result>
+			<result name="user">/WEB-INF/userjsp/usermain.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="admin">
+			<result>/WEB-INF/adminjsp/adminmain.jsp</result>
+		</action>
+		<action name="bookadd">
+			<result>/WEB-INF/adminjsp/book_add.jsp</result>
+		</action>
+		<action name="booklose">
+			<result>/WEB-INF/adminjsp/book_lose.jsp</result>
+		</action>
+		<action name="bookmanage">
+			<result>/WEB-INF/adminjsp/book_manage.jsp</result>
+		</action>
+		<action name="bookother">
+			<result>/WEB-INF/adminjsp/book_other.jsp</result>
+		</action>
+		<action name="useradd">
+			<result>/WEB-INF/adminjsp/user_add.jsp</result>
+		</action>
+		<action name="userselect">
+			<result>/WEB-INF/adminjsp/user_select.jsp</result>
+		</action>
+		<action name="usersadmin">
+			<result>/WEB-INF/adminjsp/user_sadmin.jsp</result>
+		</action>
+		<action name="usersuser">
+			<result>/WEB-INF/adminjsp/user_suser.jsp</result>
+		</action>
+		<action name="chgday">
+			<result>/WEB-INF/adminjsp/chg_day.jsp</result>
+		</action>
+		<action name="chdgrade">
+			<result>/WEB-INF/adminjsp/chd_grade.jsp</result>
+		</action>
+	</package>
+
+</struts>    

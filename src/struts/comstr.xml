@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="comstr" namespace="/" extends="struts-default">		
+		<action name="pwdchg">
+			<result>/WEB-INF/comjsp/pwd_chg.jsp</result>
+		</action>
+		<action name="datachg">
+			<result>/WEB-INF/comjsp/user_data.jsp</result>
+		</action>
+		<action name="logout">
+			<result>/logout.jsp</result>
+		</action>
+		<action name="ok">
+			<result>/WEB-INF/comjsp/ok.jsp</result>
+		</action>
+		<action name="mytest">
+			<result>/test.jsp</result>
+		</action>
+	</package>
+</struts>    
